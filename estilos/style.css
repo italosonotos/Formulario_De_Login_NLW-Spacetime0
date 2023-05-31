@@ -1,0 +1,135 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Titillium Web";
+    display: grid;
+    grid-template-areas: "formulario back";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 100vh;  
+}
+
+form{
+    display: flex;
+    grid-area: formulario;
+    flex-direction: column; 
+    padding: 54px;
+    gap: 16px;
+    background-color: #eaeaea;
+    color: #121215;
+}
+
+form img{
+    width: 100px;
+}
+
+form h1{
+    font-family: 36px;
+}
+
+small{
+    font-family: 16px;
+    color: grey;
+}
+
+a{
+    text-decoration: none;
+    color: #3e0077;
+}
+
+.login{
+    color: black;
+}
+
+a span{
+    color: #3e0077;
+}
+
+.content{
+    grid-area: back;
+}
+
+.content img{
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+input {
+    color: #8707ff;
+    border: 1px solid #8707ff;
+    border-radius: 10px;
+    padding: 10px 25px;
+    background: transparent;
+    max-width: 100%;
+}
+   
+input:active {
+    box-shadow: 2px 2px 15px #8707ff inset;
+}
+
+.btn {
+    color: #8707ff;
+    color: rgb(10, 25, 30);
+    padding: 0.8em 1.75em;
+    background-color: transparent;
+    border-radius: 6px;
+    border: .3px solid #8707ff;
+    transition: .5s;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    z-index: 1;
+    font-weight: 300px;
+    font-size: 17px;
+    font-family: 'Roboto', 'Segoe UI', sans-serif;
+    text-transform: uppercase;
+    color: #010101be;
+}
+   
+.btn::after, .btn::before {
+    content: '';
+    display: block;
+    height: 100%;
+    width: 100%;
+    transform: skew(90deg) translate(-50%, -50%);
+    position: absolute;
+    inset: 50%;
+    left: 25%;
+    z-index: -1;
+    transition: .5s ease-out;
+    background-color: #8707ff;
+}
+   
+.btn::before {
+    top: -50%;
+    left: -25%;
+    transform: skew(90deg) rotate(180deg) translate(-50%, -50%);
+}
+   
+.btn:hover::before {
+    transform: skew(45deg) rotate(180deg) translate(-50%, -50%);
+}
+   
+.btn:hover::after {
+    transform: skew(45deg) translate(-50%, -50%);
+}
+   
+.btn:hover {
+    color: #010101be;
+}
+   
+.btn:active {
+    filter: brightness(.7);
+    transform: scale(.98);
+}
+
+
+
+
+
+
